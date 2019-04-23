@@ -19,6 +19,7 @@ import android.widget.Toast;
 import com2027.housinghub.Account.AccountFragment;
 import com2027.housinghub.Favourites.FavouriteFragment;
 import com2027.housinghub.Group.GroupFragment;
+import com2027.housinghub.Manifest;
 import com2027.housinghub.R;
 import com2027.housinghub.Settings.SettingsFragment;
 
@@ -34,7 +35,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_home_student);
         Log.d(TAG,"onCreate: starting");
 
 
@@ -68,6 +69,10 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
             navigationView.setCheckedItem(R.id.nav_home);
         }
 
+    }
+
+    private void getLocationPermission(){
+        //ASKS THE USER FOR PERMISION TO USE LOCATION
     }
 
     /**

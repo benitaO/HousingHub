@@ -1,4 +1,5 @@
 <resources>
+    <string name="maps_api_key"> AIzaSyANIdKJXIr1fMZzqCg0QqG43_FOnHAHzAI </string>
     <string name="app_name">HousingHub</string>
 
 
@@ -33,5 +34,7 @@
     <string name="complete">Complete my Verification</string>
     <string name="landlordnotice">Please note: You will not be able to create any listing until authorised by an admin, this is to ensure our users can guarantee each landlord is legitimate and legally allowed to rent.</string>
     <string name="landlordinform">Take a photo or upload an image showing your right to be a landlord in the United Kingdom.</string>
+
+
 
 </resources>

@@ -4,7 +4,6 @@ package com2027.housinghub.Utils;
  */
 
 import android.content.Context;
-import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.util.Log;
@@ -12,8 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.util.List;
 import com2027.housinghub.Models.House;
@@ -33,12 +34,13 @@ public class MainFeedListAdapter extends ArrayAdapter<House> {
     private int mLayoutResorce;
     private Context mContext;
     private String currentUsername = "";
-    //private DatabaseReference mReference;
+    private DatabaseReference mReference;
 
     public MainFeedListAdapter(@NonNull Context context, int resource, @NonNull List<House> objects) {
         super(context, resource, objects);
 
         mInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        mReference = FirebaseDatabase.getInstance().getReference();
         mLayoutResorce = resource;
         this.mContext = context;
     }
@@ -83,14 +85,52 @@ public class MainFeedListAdapter extends ArrayAdapter<House> {
         //get the username
         getCurrentUsername();
 
+        //get the title of the house
+        getHouseTitle();
+
+        //get the tags and timeFrame
+        getHouseTags();
+
+        getHouseTimeFrame();
 
         return convertView;
     }
 
+    /**
+     *
+     */
+    private void getHouseTimeFrame() {
+        Log.d(TAG, "getHouseTimeFrame: retrieving time frame");
+        //Database queries
+    }
+
+    /**
+     *
+     */
+    private void getHouseTags() {
+        Log.d(TAG, "getHouseTimeFrame: retrieving time frame");
+        //Database queries
+    }
+
+    /**
+     *
+     */
+    private void getHouseTitle() {
+        Log.d(TAG, "getHouseTimeFrame: retrieving time frame");
+        //Database queries
+    }
+
+    /**
+     *
+     */
     private void getCurrentUsername(){
         Log.d(TAG, "getCurrentUsername: retrieving user account settings");
-        //DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-        //this method woll get current username
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
+        //this method will get current username
+        //Database Query stuff goes in here
+
+        //
+
     }
 
 

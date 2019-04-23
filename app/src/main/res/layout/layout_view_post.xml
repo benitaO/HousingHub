@@ -18,6 +18,7 @@
                 android:layout_height="50dp"
                 android:id="@+id/relativeLayout1">
 
+
                 <de.hdodenhof.circleimageview.CircleImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
@@ -53,13 +54,34 @@
 
             </RelativeLayout>
 
+            <RelativeLayout
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:id="@+id/timeFrameLayout"
+                android:layout_below="@+id/relativeLayout1"
+                android:elevation="20dp"
+                >
+
+                <TextView
+                    android:id="@+id/timeFrame"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/rounded_yellow_border"
+                    android:gravity="center"
+                    android:text="TimeFrame"
+                    android:textColor="@color/black"
+                    android:textSize="20dp" />
+
+            </RelativeLayout>
+
             <com2027.housinghub.Utils.SquareImageView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/post_image"
                 android:layout_below="@id/relativeLayout1"
                 android:scaleType="centerCrop"
-                android:layout_margin="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:elevation="10dp"/>
 
             <!-- -->

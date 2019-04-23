@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Layout for the clicked house post-->
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!-- Layout for the toolbar -->
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout1">
+
+        <include layout="@layout/snippet_housepost_toolbar"/>
+    </RelativeLayout>
+
+
+    <!-- layout for the pic and the post itself -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:id="@+id/relativeLayout2"
+        android:layout_below="@id/relativeLayout1">
+
+        <include layout="@layout/layout_view_post"/>
+    </RelativeLayout>
+
+
+    <!-- Layout for the button -->
+    <RelativeLayout
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/viewpostButton"
+        android:background="@drawable/rounded_primary_border"
+        android:elevation="10dp"
+        android:layout_below="@id/relativeLayout2"
+        >
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textAlignment="center"
+            android:text="book viewing "
+            android:id="@+id/buttonViewing"
+            android:textSize="16dp"
+            android:textColor="@color/white"
+            android:background="@drawable/rounded_primary_border"/>
+
+    </RelativeLayout>
+
+
+    <!-- add the description and price -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewhouse_description_price"
+        android:layout_below="@id/viewpostButton">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/description_house"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/price"/>
+    </RelativeLayout>
+
+    <!-- add the landlords picture, name  -->
+    <RelativeLayout
+        android:layout_below="@id/viewhouse_description_price"
+        android:id="@+id/layout_landlord_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp">
+
+        <include layout="@layout/layout_landlord_details"/>
+
+    </RelativeLayout>
+
+    <!-- add the map view -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_below="@id/layout_landlord_details">
+
+        <fragment
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:id="@+id/map"
+            tools:context=".HouseActivity"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

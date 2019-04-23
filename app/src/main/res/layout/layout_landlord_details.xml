@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- This layout is shown on the house view post-->
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="150dp"
-    android:background="@color/colorPrimary"
+    android:layout_height="100dp"
+    android:background="@color/white"
     android:gravity="center"
     android:orientation="horizontal"
     android:padding="16dp">
-
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -17,11 +16,10 @@
         <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/profile_icture"
+            android:id="@+id/Landlord_pic"
             android:src="@mipmap/ic_launcher_round" />
 
     </LinearLayout>
-
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -35,26 +33,16 @@
             android:paddingTop="8dp"
             android:text="FORENAME SURNAME"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="18dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="USERNAME"
-            android:textColor="#FFFFFF"
+            android:textColor="#000000"
             android:textSize="15dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="email@email.com"
-            android:textColor="#FFFFFF"
-            android:textSize="12dp" />
     </LinearLayout>
 
-
 </LinearLayout>
-
-
-
